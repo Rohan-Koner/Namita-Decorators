@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="icon" type="image/png" href="ND-Logo-design-vector-Graphics-17819628-1-1-580x386-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
+    <title>Namita Decorators</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        /* Header Styling */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #c5d0f1, #584df1);
+            padding: 15px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        /* Logo */
+        #logo img {
+            height: 60px;
+        }
+        /* Navigation Links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-links div {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .nav-links div:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+        /* Contact Section */
+        #contact {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        #contact a {
+            text-decoration: none;
+            color: #0072ff;
+            font-weight: bold;
+        }
+        #contact:hover {
+            background: #ffdd57;
+        }
+        /* Social & Location */
+        #details, #Location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        #details a, #Location a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        #details a:hover, #Location a:hover {
+            color: #ffdd57;
+        }
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .hamburger:hover {
+            color: #ffdd57;
+        }
+        @media screen and (max-width: 768px) {
+            #header {
+                flex-wrap: wrap;
+                padding: 12px 15px;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                background: linear-gradient(135deg,#c5d0f1, #584df1 );
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                animation: slideDown 0.3s ease-in-out;
+                border-radius: 0px 0px 10px 10px;
+            }
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            #contact {
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="header">
+        <div id="logo">
+            <img src="ND-Logo-design-vector-Graphics-17819628-1-1-580x386-removebg-preview.png">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <div class="text">Home</div>
+            <div class="text">Album</div>
+            <div class="text">Book Now</div>
+            <div id="contact">
+                <p><a href="tel:9832350285">📞 9832350285</a></p>
+            </div>
+            <div id="details">
+                <a href="https://www.facebook.com/namitadecorators.KanaiAich" target="_blank">
+                    <i class="ri-global-line"></i> More Details
+                </a>
+            </div>
+            <div id="Location">
+                <a href="https://www.google.com/maps/@23.0599265,88.0399684,3a,75y,249.4h,84.22t/data=!3m7!1e1!3m5!1sV1yphzT50tdEPoCjCJ_gwg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D5.77899821431572%26panoid%3DV1yphzT50tdEPoCjCJ_gwg%26yaw%3D249.39534944252628!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
+                    <i class="ri-map-pin-user-line"></i> Our Location
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</head>
+<body>
+   </div>
+        <div id="fakeheader"></div>
+        <div id="page1">
+            <div id="strip">
+                <p>Namita Decorators ; Since - 1987 ; Govt.Reg.No - 3797</p>
+            </div>
+            <div id="content">
+                <div id="box1">
+                    <h1>Namita Decorators</h1>
+                    <p>is a professional event decoration company known for transforming ordinary spaces into stunning, memorable venues for various occasions, such as weddings, corporate events, birthday parties, and festive celebrations. With a keen eye for design, creative concepts, and attention to detail, Namita Decorators specializes in crafting elegant and customized decor tailored to each client’s vision and theme. The team is dedicated to using high-quality materials, innovative techniques, and a blend of traditional and modern aesthetics to create captivating atmospheres. Their services include floral arrangements, stage decoration, lighting, and thematic setups that leave a lasting impression.</p>
+                </div>
+                <div id="box2"><img src="ND.jpg" alt="ND image" srcset=""></div>
+            </div>
+        </div>
+     <div id="page2">
+        <div id="strip2"><p>Festive occasions</p></div>
+       <div class="gallery-container">
+            <img src="Img1.jpg" alt="">
+            <img src="Jagadhatri.jpg" alt="">
+            <img src="Nahobad.jpg" alt="">
+            <img src="Jagadhatri2.jpg" alt="">
+            <img src="Krishna.jpg" alt="">
+       </div>
+
+            
+       
+       
+        
+       
+    </div>
+</div>
+
+<div id="page3">
+    <div id="strip3">Marriage Ceremony</div>
+    <div class="gallery-container1">
+        <img src="Img4.jpg" alt="">
+        <img src="Img2.jpg" alt="">
+        <img src="Img6.jpg" alt="">
+        <img src="Img15.jpg" alt="">
+        <img src="Img11.jpg" alt="">
+        <img src="Img21.jpg" alt="">
+        <img src="Img20.jpg" alt="">
+        <img src="Img22.jpg" alt="">
+        <img src="Img23.jpg" alt="">
+        <img src="Img25.jpg" alt="">
+    </div>
+</div>
+<div id="page4">
+    <div id="strip4"></div>
+    <div class="gallery-container2">
+       
+        <img src="Img17.jpg" alt="">
+        <img src="Img18.jpg" alt="">
+        <img src="Img19.jpg" alt="">
+        <img src="Img26.jpg" alt="">
+    </div>
+    <section id="contact">
+        <h2>Book Now</h2>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="company" value="Namita Decorators">
+            <input type="hidden" name="access_key" value="32953592-2449-4c22-b21b-391236c9e5ab">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+            <input type="date" name="appointment-date" id="appointmentDate" required>
+
+            <script> //apponitment date js
+                document.addEventListener("DOMContentLoaded", function () {
+                let today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+                document.getElementById("appointmentDate").setAttribute("min", today);
+                 });
+            </script>
+
+            <textarea name="message" placeholder="For what reason you contact to us?"></textarea>
+        
+            <form action="another.html" method="get">
+                <button type="submit">Send</button>
+            </form>
+            
+        </form>
+        <footer>
+        <p>&copy; 2025 Namita Decorators. All rights reserved.</p>
+        </footer>
+        
+</div>
+</body>
+</html>

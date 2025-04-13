@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+#header {
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+#logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.text {
+    color: rgb(1, 2, 37);
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.text:hover {
+    color: rgb(73, 129, 231);
+}
+
+/* Icons & Contact */
+#details, #Location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+#details:hover, #Location:hover {
+    background-color: rgb(55, 11, 105);
+}
+
+#details a, #Location a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: lighter;
+}
+
+#details i, #Location i {
+    font-size: 20px;
+}
+
+/* Page Content Sections */
+#page1, #page2, #page3, #page4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 87vh;
+    width: 100%;
+    padding-top: 13vh;
+    background-color: rgb(214, 211, 212);
+    text-align: center;
+}
+
+/* Strips (Headings) - Unified Deep Blue Color */
+#strip {
+    width: 100%;
+    height: auto; /* Adjust height dynamically */
+    padding: 10px 5px; /* Add some padding */
+    background-color: #60ccf7;
+    color: white;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 2.5vw; /* Scale text with viewport width */
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center; /* Ensure text stays in center */
+
+    animation: typing 2.5s ,steps(19),
+    cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50% { border-color: transparent;}
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+
+#strip span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 8s linear infinite;
+}
+
+
+#strip2 {
+    width: 100%;
+    height: 8%;
+    color: rgb(41, 6, 105);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    place-items: center;
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* New Animation */
+    opacity: 0;
+    animation: bounceIn 1.5s ease-out forwards;
+}
+
+/* Keyframes for Bounce-In Effect */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#strip3 {
+    width: 100%;
+    height: 8%;
+    color: rgb(41, 6, 105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow: hidden;
+    animation: bounceFade 1.5s ease-in-out forwards;
+}
+
+/* Bounce-In & Fade Effect */
+@keyframes bounceFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#strip4 {
+    width: 100%;
+    height: 8%;
+    color: rgb(41, 6, 105);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    place-items: center;
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+}
+
+/* New sliding text animation */
+#strip4::after {
+    content: "Birthday Special"; 
+    display: inline-block;
+    animation: slide-in 1.5s ease-out, bounce 0.5s ease-in-out 1.5s;
+    white-space: nowrap;
+}
+
+/* Slide in effect */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Subtle bounce effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Content Section */
+#content {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+#box1, #box2 {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#box1 h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: rgb(2, 2, 54);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+#box1 p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#box2 img {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Gallery Adjustments */
+.gallery-container, .gallery-container1, .gallery-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    text-align: center; /* Ensures content stays centered */
+}
+
+.gallery-container img, .gallery-container1 img, .gallery-container2 img {
+    width: 100%;
+    max-width: 400px;  /* Adjust this value as needed */
+    height: 250px;      /* Fixed height for all images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Centers images horizontally */
+}
+
+.gallery-container img:hover, .gallery-container1 img:hover, .gallery-container2 img:hover {
+    transform: scale(1.03);
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 500px);
+    margin: 30px auto;
+    gap: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #f88888;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color:#4171f5;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #064180;
+}
+
+/* Footer */
+footer {
+    /* background-color: #007bff; */
+    color: #198cf8;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #header {
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    #content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #strip {
+        font-size: 3.5vw;
+        padding: 10px;
+        white-space: normal;
+        text-align: center;
+
+    }
+
+    #strip span {
+        animation: scrollText 10s linear infinite;
+    }
+
+
+    #box1, #box2 {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #box2 img {
+        max-height: 400px;
+    }
+
+    .gallery-container img, .gallery-container1 img, .gallery-container2 img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #strip {
+        font-size: 1.2rem;
+        min-height: 12vh; /* More height for very small screens */
+        padding: 15px;
+    }
+
+     #strip2, #strip3, #strip4 {
+        font-size: 1.3rem;
+        height: 10%;
+    }
+
+    .gallery-container, .gallery-container1, .gallery-container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container img, .gallery-container1 img, .gallery-container2 img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #strip {
+        font-size: 4vw;
+    }
+}
